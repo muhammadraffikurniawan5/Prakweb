@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\InputController;
+use App\Http\Controllers\ForminputController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdukController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,3 +47,20 @@ Route::get('/output', function () {
 
 Route::get('/about', [InputController::class, 'index']);
 Route::post('/output', [InputController::class, 'output']);
+
+Route::get('/form', function () {
+    return view('forminput');
+});
+
+Route::get('/form', [ForminputController::class, 'index']);
+Route::post('/form', [ForminputController::class, 'form']);         
+
+Route::prefix('admin')->group(function (){
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/produk', [ProdukController::class, 'index']);
+});
+
+Route::prefix('frontend')->group(function (){
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+});

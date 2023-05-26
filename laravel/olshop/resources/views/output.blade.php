@@ -11,7 +11,7 @@
     <h3 style="text-align: center">Output Regist</h3>
     <table class="table">
         <thead class="table-light">
-            <tr>\
+            <tr>
                 <th>Nama</th>
                 <th>Email</th>
                 <th>Jenis Kelamin</th>
