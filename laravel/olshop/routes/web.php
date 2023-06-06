@@ -5,6 +5,9 @@ use App\Http\Controllers\ForminputController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\AboutController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,7 +63,7 @@ Route::prefix('admin')->group(function (){
     Route::get('/produk', [ProdukController::class, 'index']);
 });
 
-Route::prefix('frontend')->group(function (){
-    Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::prefix('frontend')->group(function () {
+    Route::get('/dashboard', [FrontendController::class, 'index']);
+    Route::get('/about', [AboutController::class, 'index']);
 });

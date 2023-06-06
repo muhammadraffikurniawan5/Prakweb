@@ -1,7 +1,7 @@
 @extends('admin.layout.app')
 @section('content')
-    {{-- ini content halaman dashboard --}}
-    <h1 class="mt-4">Tables</h1>
+{{-- ini adalah halaman produk --}}
+<h1 class="mt-4">Tables</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                             <li class="breadcrumb-item active">Tables</li>
@@ -499,7 +499,4 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                    </div>               
 @endsection
